@@ -4,3 +4,21 @@
   padding: 0;
 }
 
+header {
+  font-family: "Roboto", sans-serif;
+}
+
+header .header_container {
+  height: 80px;
+  background-color: lightgreen;
+}
+
+header .header_container .col-xs-1 {
+  background-color: lightblue;
+  height: 100%;
+}
+
+.container_100 {
+  width: 100%;
+}
+
