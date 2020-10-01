@@ -1,0 +1,49 @@
+#jumbo{
+  width: 100%;
+  height: 460px;
+  background-image: url(../img/hero-painteressentials-7.jpg);
+  background-position: 50%;
+
+  .jumbo-container{
+    display: flex;
+    height: 100%;
+
+    .col-4{
+      width: calc(100% / 3);
+      border: 1px solid #000;
+    }
+
+    .left-col{
+      position: relative;
+
+      #jumbo-signature{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-weight: lighter;
+      }
+    }
+
+    .central-col{
+
+      .software-features{
+        list-style: none;
+      }
+
+      & li h2, h4, p{
+        font-weight: 400;
+        color: #fff;
+      }
+      & li p{
+        display: inline-block;
+      }
+
+
+
+
+    }
+  }
+
+}
