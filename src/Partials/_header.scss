@@ -1,11 +1,73 @@
 .header-top{
-  background-color: blue;
+  display: flex;
+  justify-content: flex-end;
+
 }
 .header-bottom{
-  background-color: pink;
+
 }
 
 
 .secondary-nav{
- @import reset-list;
+  min-height: 40px;
+  @include reset-list;
+  align-items: center;
+
+ li{
+   padding: 0 10px;
+
+   i{
+     font-size: 12px;
+     color: $mainColor;
+     padding: 0 5px;
+   }
+   a{
+     color: $darkGrey;
+     text-decoration: none;
+     font-size: 12px;
+   }
+   a:hover{
+     color: #fff;
+     text-decoration: underline;
+   }
+
+ }
+}
+
+.primary-nav{
+  @include reset-list;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  li{
+    // flex: none;
+    max-height: 50px;
+    padding: 15px 25px;
+
+    &:first-child{
+      padding: 0 15px;
+    }
+    @media screen and (max-width: 1170px){
+      &:first-child{
+        width: 100%;
+      }
+    }
+
+
+    .logo-wrapper{
+      img{
+        width: 90px;
+      }
+    }
+    a{
+      font-size: 14px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .fa-angle-down{
+      font-size: 12px;
+      padding: 0 5px;
+      color: $darkGrey;
+    }
+  }
 }

@@ -10,15 +10,64 @@ header {
 }
 
 .header-top {
-  background-color: blue;
-}
-
-.header-bottom {
-  background-color: pink;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .secondary-nav {
-  background-color: red;
+  min-height: 40px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.secondary-nav li {
+  padding: 0 10px;
+}
+.secondary-nav li i {
+  font-size: 12px;
+  color: #009cff;
+  padding: 0 5px;
+}
+.secondary-nav li a {
+  color: #998988;
+  text-decoration: none;
+  font-size: 12px;
+}
+.secondary-nav li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.primary-nav {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.primary-nav li {
+  max-height: 50px;
+  padding: 15px 25px;
+}
+.primary-nav li:first-child {
+  padding: 0 15px;
+}
+@media screen and (max-width: 1170px) {
+  .primary-nav li:first-child {
+    width: 100%;
+  }
+}
+.primary-nav li .logo-wrapper img {
+  width: 90px;
+}
+.primary-nav li a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+.primary-nav li .fa-angle-down {
+  font-size: 12px;
+  padding: 0 5px;
+  color: #998988;
 }
 
 .container-xl {
