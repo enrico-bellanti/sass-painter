@@ -1,18 +1,19 @@
 // HEADER
 .header-container{
-  height: $headerHeight;
+  min-height: $headerHeight;
+  padding: 0 20px;
   background-color: #000;
 }
 
 .header-top{
-  height: 50%;
+  min-height: 50px;
+  justify-content: flex-end;
   align-items: center;
 
     .secondary-nav{
 
       &-list{
         @include reset-list;
-        justify-content: flex-end;
         li{
           flex-shrink: 0;
           margin: 0 10px;
@@ -40,23 +41,34 @@
 }
 
 .header-bottom{
-  height: 50%;
+  min-height: 50px;
   align-items: center;
 
   .img-logo-wrapper{
-    text-align: center;
+    @media screen and (min-width: 0px) and (max-width: 992px){
+      &{
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    img{
+      width: 90px;
+    }
   }
 
   .primary-nav{
+    max-width: calc(100% - 90px);
 
     &-list{
       @include reset-list;
       li{
-
+        max-width: calc(100% / 8);
         a{
           padding: 15px 20px;
           color: #fff;
           text-decoration: none;
+          font-size: 12px;
         }
         a:hover{
           color: #000;
@@ -68,6 +80,10 @@
         }
       }
     }
+    @media screen and (min-width: 0px) and (max-width: 992px){
+      &{
+        width: 100%;
+      }
+    }
   }
-
 }
