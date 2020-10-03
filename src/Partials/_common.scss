@@ -8,3 +8,42 @@
 header{
   background-color: #000;
 }
+
+
+// BUTTONS
+
+.btn_download{
+  display: flex;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  padding: 10px;
+  color: #fff;
+  background-color: $buttonGrey;
+  cursor: pointer;
+
+  .btn-text {
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+
+    & h5{
+      font-weight: lighter;
+    }
+  }
+
+  .btn-icon-down{
+    font-size: 22px;
+    padding-left: 10px;
+  }
+}
+
+.btn-brand{
+  display: inline-block;
+  padding: 7px 32px;
+  background-color: $mainColor;
+  color: $jumboColor;
+  cursor: pointer;
+}
+.btn-brand:hover{
+  background-color: #28acff;
+}

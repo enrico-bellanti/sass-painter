@@ -8,12 +8,9 @@
     display: flex;
     height: 100%;
 
-    .col-4{
-      width: calc(100% / 3);
-      border: 1px solid #000;
-    }
-
+    // COLONNA DI SINISTRA
     .left-col{
+      width: 24%;
       position: relative;
 
       #jumbo-signature{
@@ -21,29 +18,114 @@
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
-        color: #fff;
+        color: $jumboColor;
         font-weight: lighter;
       }
     }
 
+    // COLONNA CENTRALE
     .central-col{
+      width: 43%;
 
-      .software-features{
-        list-style: none;
+      .jumbo-text-wrapper{
+        margin-top: 50px;
+        .software-features{
+          list-style: none;
+        }
+
+        & li{
+          & h2, h4{
+            font-weight: normal;
+            color: $jumboColor;
+          }
+          & h2{
+            font-size: 30px;
+          }
+          & h4{
+            font-size: 20px;
+            margin: 20px 0;
+          }
+          & > i{
+            margin: 0 5px;
+            color: $buttonGrey;
+          }
+          & p{
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: lighter;
+            color: $jumboColor;
+          }
+          &:last-child{
+            margin-top: 20px;
+          }
+        }
+
       }
-
-      & li h2, h4, p{
-        font-weight: 400;
-        color: #fff;
-      }
-      & li p{
-        display: inline-block;
-      }
-
-
-
-
     }
-  }
 
+    // COLONNA DI DESTRA
+    .right-col{
+      width: 33%;
+
+      .offers-container{
+        width: 100%;
+        height: calc(100% - 30px);
+        margin-top: 30px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.9);
+
+        & .row-top{
+          display: flex;
+          margin-bottom: 40px;
+          & .col{
+            width: 50%;
+            &.col-left{
+              & .price{
+                margin-top: 40px;
+                color: $jumboColor;
+                font-size: 25px;
+              }
+              & .label-download{
+                margin: 10px 0;
+                color: $buttonGrey;
+                font-size: 15px;
+              }
+            }
+            &.col-right{
+              text-align: right;
+              & img{
+
+              }
+            }
+          }
+        }
+        & .row-bottom{
+          & .col{
+            padding: 10px 10px;
+            color: $greyCarcoal;
+            background-color: $jumboColor;
+            & h4{
+              font-size: 18px;
+              font-weight: lighter;
+            }
+            & p{
+              margin: 5px 0;
+              font-size: 12px;
+            }
+            & a{
+              color: #009cff;
+              font-size: 14px;
+              text-decoration: none;
+            }
+            & a:hover{
+              color: #009cff;
+              font-size: 14px;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+  }
 }

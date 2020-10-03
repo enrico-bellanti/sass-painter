@@ -9,6 +9,40 @@ header {
   background-color: #000;
 }
 
+.btn_download {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  padding: 10px;
+  color: #fff;
+  background-color: #666666;
+  cursor: pointer;
+}
+.btn_download .btn-text {
+  border-right: 1px solid #fff;
+  padding-right: 10px;
+}
+.btn_download .btn-text h5 {
+  font-weight: lighter;
+}
+.btn_download .btn-icon-down {
+  font-size: 22px;
+  padding-left: 10px;
+}
+
+.btn-brand {
+  display: inline-block;
+  padding: 7px 32px;
+  background-color: #009cff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-brand:hover {
+  background-color: #28acff;
+}
+
 #header-container {
   display: flex;
   flex-direction: column;
@@ -132,11 +166,8 @@ header {
   display: flex;
   height: 100%;
 }
-#jumbo .jumbo-container .col-4 {
-  width: calc(100% / 3);
-  border: 1px solid #000;
-}
 #jumbo .jumbo-container .left-col {
+  width: 24%;
   position: relative;
 }
 #jumbo .jumbo-container .left-col #jumbo-signature {
@@ -147,13 +178,89 @@ header {
   color: #fff;
   font-weight: lighter;
 }
-#jumbo .jumbo-container .central-col .software-features {
+#jumbo .jumbo-container .central-col {
+  width: 43%;
+}
+#jumbo .jumbo-container .central-col .jumbo-text-wrapper {
+  margin-top: 50px;
+}
+#jumbo .jumbo-container .central-col .jumbo-text-wrapper .software-features {
   list-style: none;
 }
-#jumbo .jumbo-container .central-col li h2, #jumbo .jumbo-container .central-col h4, #jumbo .jumbo-container .central-col p {
-  font-weight: 400;
+#jumbo .jumbo-container .central-col .jumbo-text-wrapper li h2, #jumbo .jumbo-container .central-col .jumbo-text-wrapper li h4 {
+  font-weight: normal;
   color: #fff;
 }
-#jumbo .jumbo-container .central-col li p {
+#jumbo .jumbo-container .central-col .jumbo-text-wrapper li h2 {
+  font-size: 30px;
+}
+#jumbo .jumbo-container .central-col .jumbo-text-wrapper li h4 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+#jumbo .jumbo-container .central-col .jumbo-text-wrapper li > i {
+  margin: 0 5px;
+  color: #666666;
+}
+#jumbo .jumbo-container .central-col .jumbo-text-wrapper li p {
   display: inline-block;
+  margin-bottom: 15px;
+  font-weight: lighter;
+  color: #fff;
+}
+#jumbo .jumbo-container .central-col .jumbo-text-wrapper li:last-child {
+  margin-top: 20px;
+}
+#jumbo .jumbo-container .right-col {
+  width: 33%;
+}
+#jumbo .jumbo-container .right-col .offers-container {
+  width: 100%;
+  height: calc(100% - 30px);
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#jumbo .jumbo-container .right-col .offers-container .row-top {
+  display: flex;
+  margin-bottom: 40px;
+}
+#jumbo .jumbo-container .right-col .offers-container .row-top .col {
+  width: 50%;
+}
+#jumbo .jumbo-container .right-col .offers-container .row-top .col.col-left .price {
+  margin-top: 40px;
+  color: #fff;
+  font-size: 25px;
+}
+#jumbo .jumbo-container .right-col .offers-container .row-top .col.col-left .label-download {
+  margin: 10px 0;
+  color: #666666;
+  font-size: 15px;
+}
+#jumbo .jumbo-container .right-col .offers-container .row-top .col.col-right {
+  text-align: right;
+}
+#jumbo .jumbo-container .right-col .offers-container .row-bottom .col {
+  padding: 10px 10px;
+  color: #333;
+  background-color: #fff;
+}
+#jumbo .jumbo-container .right-col .offers-container .row-bottom .col h4 {
+  font-size: 18px;
+  font-weight: lighter;
+}
+#jumbo .jumbo-container .right-col .offers-container .row-bottom .col p {
+  margin: 5px 0;
+  font-size: 12px;
+}
+#jumbo .jumbo-container .right-col .offers-container .row-bottom .col a {
+  color: #009cff;
+  font-size: 14px;
+  text-decoration: none;
+}
+#jumbo .jumbo-container .right-col .offers-container .row-bottom .col a:hover {
+  color: #009cff;
+  font-size: 14px;
+  text-decoration: underline;
 }
