@@ -3,79 +3,132 @@
   height: 460px;
   background-image: url(../img/hero-painteressentials-7.jpg);
   background-position: 50%;
+  @media screen and (max-width: 992px){
+    background-position: 70%;
+  }
+  @media screen and (max-width: 768px){
+    background-image: none;
+  }
 
   .jumbo-container{
     display: flex;
     height: 100%;
-
-    // COLONNA DI SINISTRA
-    .left-col{
-      width: 24%;
-      position: relative;
-
-      #jumbo-signature{
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: $jumboColor;
-        font-weight: lighter;
-      }
+    @media screen and (max-width: 768px){
+      flex-direction: column;
     }
 
-    // COLONNA CENTRALE
-    .central-col{
-      width: 43%;
-
-      .jumbo-text-wrapper{
-        margin-top: 50px;
-        .software-features{
-          list-style: none;
-        }
-
-        & li{
-          & h2, h4{
-            font-weight: normal;
-            color: $jumboColor;
-          }
-          & h2{
-            font-size: 30px;
-          }
-          & h4{
-            font-size: 20px;
-            margin: 20px 0;
-          }
-          & > i{
-            margin: 0 5px;
-            color: $buttonGrey;
-          }
-          & p{
-            display: inline-block;
-            margin-bottom: 15px;
-            font-weight: lighter;
-            color: $jumboColor;
-          }
-          &:last-child{
-            margin-top: 20px;
-          }
-        }
-
+    // COLONNA DI SINISTRA
+    & .col-left{
+      width: 67%;
+      @media screen and (max-width: 1170px){
+        width: 62%;
       }
+      @media screen and (max-width: 768px){
+        width: 100%;
+      }
+
+      & .col-left-top{
+
+        .jumbo-text-wrapper{
+          margin-top: 50px;
+          margin-left: 280px;
+          @media screen and (max-width: 1170px){
+            margin-left: 230px;
+          }
+          @media screen and (max-width: 992px){
+            margin-left: 20px;
+          }
+          @media screen and (max-width: 768px){
+            margin-top: 15px;
+          }
+          .software-features{
+            list-style: none;
+          }
+            & li{
+              & h2, h4{
+                font-weight: normal;
+                color: $jumboColor;
+              }
+              & h2{
+                font-size: 30px;
+              }
+              &.img_768{
+                display: none;
+              }
+              & h4{
+                font-size: 20px;
+                margin: 20px 0;
+              }
+              & > i{
+                margin: 0 5px;
+                color: $buttonGrey;
+              }
+              & > p{
+                display: inline-block;
+                margin-bottom: 15px;
+                font-weight: lighter;
+                color: $jumboColor;
+              }
+              &:last-child{
+                margin-top: 20px;
+              }
+              @media screen and (max-width: 768px){
+                &.img_768{
+                  display: block;
+                  text-align: center;
+                  margin: 15px 0;
+                }
+                & h2, h4, p{
+                  color: $jumboColorSD;
+                }
+              }
+            }
+
+        }
+      }
+
+      & .col-left-bottom{
+        @media screen and (max-width: 768px){
+          display: none;
+        }
+
+        #jumbo-signature{
+          position: relative;
+          top: 20px;
+          left: 100px;
+          color: $jumboColor;
+          font-weight: lighter;
+          @media screen and (max-width: 1170px){
+            left: 20px;
+          }
+        }
+      }
+
     }
 
     // COLONNA DI DESTRA
-    .right-col{
+    .col-right{
       width: 33%;
-
+      @media screen and (max-width: 1170px){
+        width: 38%;
+      }
+      @media screen and (max-width: 768px){
+        width: auto;
+        margin: 20px;
+      }
       .offers-container{
         width: 100%;
         height: calc(100% - 30px);
         margin-top: 30px;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.9);
+        @media screen and (max-width: 768px){
+          background-color: $lightGrey;
+        }
 
         & .row-top{
           display: flex;
+          position: relative;
           margin-bottom: 40px;
           & .col{
             width: 50%;
@@ -84,20 +137,30 @@
                 margin-top: 40px;
                 color: $jumboColor;
                 font-size: 25px;
+                @media screen and (max-width: 768px){
+                  color: $jumboColorSD;
+                }
               }
               & .label-download{
                 margin: 10px 0;
                 color: $buttonGrey;
                 font-size: 15px;
               }
+              @media screen and (max-width: 768px){
+                width: 100%;
+              }
             }
             &.col-right{
               text-align: right;
-              & img{
-
+              @media screen and (max-width: 768px){
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
               }
             }
           }
+
         }
         & .row-bottom{
           & .col{

@@ -9,10 +9,9 @@ header{
   background-color: #000;
 }
 
-
 // BUTTONS
-
-.btn_download{
+// bottone download
+.btn-download{
   display: flex;
   align-items: center;
   width: 180px;
@@ -25,9 +24,13 @@ header{
   .btn-text {
     border-right: 1px solid #fff;
     padding-right: 10px;
-
     & h5{
       font-weight: lighter;
+    }
+    & p{
+      display: none;
+      color: $jumboColorSD;
+      font-size: 14px;
     }
   }
 
@@ -35,14 +38,40 @@ header{
     font-size: 22px;
     padding-left: 10px;
   }
+  @media screen and (max-width: 768px){
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid $buttonGrey;
+    & .btn-icon-down{
+      display: none;
+    }
+    & .btn-text{
+      border-right: 0;
+      padding: 0;
+      & h5{
+        display: none;
+      }
+      & p{
+        display: block;
+      }
+    }
+  }
 }
 
+
+// bottone azzurro
 .btn-brand{
   display: inline-block;
   padding: 7px 32px;
   background-color: $mainColor;
   color: $jumboColor;
   cursor: pointer;
+  @media screen and (max-width: 768px){
+    display: block;
+    text-align: center;
+  }
 }
 .btn-brand:hover{
   background-color: #28acff;

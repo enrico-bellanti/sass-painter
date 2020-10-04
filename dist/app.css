@@ -9,7 +9,7 @@ header {
   background-color: #000;
 }
 
-.btn_download {
+.btn-download {
   display: flex;
   align-items: center;
   width: 180px;
@@ -19,16 +19,43 @@ header {
   background-color: #666666;
   cursor: pointer;
 }
-.btn_download .btn-text {
+.btn-download .btn-text {
   border-right: 1px solid #fff;
   padding-right: 10px;
 }
-.btn_download .btn-text h5 {
+.btn-download .btn-text h5 {
   font-weight: lighter;
 }
-.btn_download .btn-icon-down {
+.btn-download .btn-text p {
+  display: none;
+  color: #000;
+  font-size: 14px;
+}
+.btn-download .btn-icon-down {
   font-size: 22px;
   padding-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .btn-download {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #666666;
+  }
+  .btn-download .btn-icon-down {
+    display: none;
+  }
+  .btn-download .btn-text {
+    border-right: 0;
+    padding: 0;
+  }
+  .btn-download .btn-text h5 {
+    display: none;
+  }
+  .btn-download .btn-text p {
+    display: block;
+  }
 }
 
 .btn-brand {
@@ -37,6 +64,12 @@ header {
   background-color: #009cff;
   color: #fff;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .btn-brand {
+    display: block;
+    text-align: center;
+  }
 }
 
 .btn-brand:hover {
@@ -162,104 +195,198 @@ header {
   background-image: url(../img/hero-painteressentials-7.jpg);
   background-position: 50%;
 }
+@media screen and (max-width: 992px) {
+  #jumbo {
+    background-position: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #jumbo {
+    background-image: none;
+  }
+}
 #jumbo .jumbo-container {
   display: flex;
   height: 100%;
 }
-#jumbo .jumbo-container .left-col {
-  width: 24%;
-  position: relative;
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container {
+    flex-direction: column;
+  }
 }
-#jumbo .jumbo-container .left-col #jumbo-signature {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  font-weight: lighter;
+#jumbo .jumbo-container .col-left {
+  width: 67%;
 }
-#jumbo .jumbo-container .central-col {
-  width: 43%;
+@media screen and (max-width: 1170px) {
+  #jumbo .jumbo-container .col-left {
+    width: 62%;
+  }
 }
-#jumbo .jumbo-container .central-col .jumbo-text-wrapper {
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container .col-left {
+    width: 100%;
+  }
+}
+#jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper {
   margin-top: 50px;
+  margin-left: 280px;
 }
-#jumbo .jumbo-container .central-col .jumbo-text-wrapper .software-features {
+@media screen and (max-width: 1170px) {
+  #jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper {
+    margin-left: 230px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper {
+    margin-top: 15px;
+  }
+}
+#jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper .software-features {
   list-style: none;
 }
-#jumbo .jumbo-container .central-col .jumbo-text-wrapper li h2, #jumbo .jumbo-container .central-col .jumbo-text-wrapper li h4 {
+#jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li h2, #jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li h4 {
   font-weight: normal;
   color: #fff;
 }
-#jumbo .jumbo-container .central-col .jumbo-text-wrapper li h2 {
+#jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li h2 {
   font-size: 30px;
 }
-#jumbo .jumbo-container .central-col .jumbo-text-wrapper li h4 {
+#jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li.img_768 {
+  display: none;
+}
+#jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li h4 {
   font-size: 20px;
   margin: 20px 0;
 }
-#jumbo .jumbo-container .central-col .jumbo-text-wrapper li > i {
+#jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li > i {
   margin: 0 5px;
   color: #666666;
 }
-#jumbo .jumbo-container .central-col .jumbo-text-wrapper li p {
+#jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li > p {
   display: inline-block;
   margin-bottom: 15px;
   font-weight: lighter;
   color: #fff;
 }
-#jumbo .jumbo-container .central-col .jumbo-text-wrapper li:last-child {
+#jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li:last-child {
   margin-top: 20px;
 }
-#jumbo .jumbo-container .right-col {
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li.img_768 {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+  }
+  #jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li h2, #jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li h4, #jumbo .jumbo-container .col-left .col-left-top .jumbo-text-wrapper li p {
+    color: #000;
+  }
+}
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container .col-left .col-left-bottom {
+    display: none;
+  }
+}
+#jumbo .jumbo-container .col-left .col-left-bottom #jumbo-signature {
+  position: relative;
+  top: 20px;
+  left: 100px;
+  color: #fff;
+  font-weight: lighter;
+}
+@media screen and (max-width: 1170px) {
+  #jumbo .jumbo-container .col-left .col-left-bottom #jumbo-signature {
+    left: 20px;
+  }
+}
+#jumbo .jumbo-container .col-right {
   width: 33%;
 }
-#jumbo .jumbo-container .right-col .offers-container {
+@media screen and (max-width: 1170px) {
+  #jumbo .jumbo-container .col-right {
+    width: 38%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container .col-right {
+    width: auto;
+    margin: 20px;
+  }
+}
+#jumbo .jumbo-container .col-right .offers-container {
   width: 100%;
   height: calc(100% - 30px);
   margin-top: 30px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.9);
 }
-#jumbo .jumbo-container .right-col .offers-container .row-top {
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container .col-right .offers-container {
+    background-color: #eaeaea;
+  }
+}
+#jumbo .jumbo-container .col-right .offers-container .row-top {
   display: flex;
+  position: relative;
   margin-bottom: 40px;
 }
-#jumbo .jumbo-container .right-col .offers-container .row-top .col {
+#jumbo .jumbo-container .col-right .offers-container .row-top .col {
   width: 50%;
 }
-#jumbo .jumbo-container .right-col .offers-container .row-top .col.col-left .price {
+#jumbo .jumbo-container .col-right .offers-container .row-top .col.col-left .price {
   margin-top: 40px;
   color: #fff;
   font-size: 25px;
 }
-#jumbo .jumbo-container .right-col .offers-container .row-top .col.col-left .label-download {
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container .col-right .offers-container .row-top .col.col-left .price {
+    color: #000;
+  }
+}
+#jumbo .jumbo-container .col-right .offers-container .row-top .col.col-left .label-download {
   margin: 10px 0;
   color: #666666;
   font-size: 15px;
 }
-#jumbo .jumbo-container .right-col .offers-container .row-top .col.col-right {
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container .col-right .offers-container .row-top .col.col-left {
+    width: 100%;
+  }
+}
+#jumbo .jumbo-container .col-right .offers-container .row-top .col.col-right {
   text-align: right;
 }
-#jumbo .jumbo-container .right-col .offers-container .row-bottom .col {
+@media screen and (max-width: 768px) {
+  #jumbo .jumbo-container .col-right .offers-container .row-top .col.col-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
+}
+#jumbo .jumbo-container .col-right .offers-container .row-bottom .col {
   padding: 10px 10px;
   color: #333;
   background-color: #fff;
 }
-#jumbo .jumbo-container .right-col .offers-container .row-bottom .col h4 {
+#jumbo .jumbo-container .col-right .offers-container .row-bottom .col h4 {
   font-size: 18px;
   font-weight: lighter;
 }
-#jumbo .jumbo-container .right-col .offers-container .row-bottom .col p {
+#jumbo .jumbo-container .col-right .offers-container .row-bottom .col p {
   margin: 5px 0;
   font-size: 12px;
 }
-#jumbo .jumbo-container .right-col .offers-container .row-bottom .col a {
+#jumbo .jumbo-container .col-right .offers-container .row-bottom .col a {
   color: #009cff;
   font-size: 14px;
   text-decoration: none;
 }
-#jumbo .jumbo-container .right-col .offers-container .row-bottom .col a:hover {
+#jumbo .jumbo-container .col-right .offers-container .row-bottom .col a:hover {
   color: #009cff;
   font-size: 14px;
   text-decoration: underline;
