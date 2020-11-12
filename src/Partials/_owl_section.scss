@@ -1,0 +1,36 @@
+// SEZIONE CAROUSEL
+.owl-section{
+  & .carosuel-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    & .carousel{
+      @include reset-list;
+      width: 80%;
+      height: 667px;
+      & li{
+        & img{
+          max-width: 100%;
+          height: 667px;
+        }
+      }
+    }
+    & .arrows{
+      width: 29px;
+      height: 29px;
+      overflow: hidden;
+      cursor: pointer;
+      &.arrow-right{
+        margin-left: 20px;
+        transform: rotate(180deg);
+      }
+      &.arrow-left{
+        margin-right: 20px;
+      }
+    }
+    & .carousel-after{
+    }
+  }
+}
